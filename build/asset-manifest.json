@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wealthymonkey28/The-little-wizards-quill/static/css/main.cba1c587.css",
+    "main.js": "/wealthymonkey28/The-little-wizards-quill/static/js/main.2ae37fdd.js",
+    "index.html": "/wealthymonkey28/The-little-wizards-quill/index.html",
+    "main.cba1c587.css.map": "/wealthymonkey28/The-little-wizards-quill/static/css/main.cba1c587.css.map",
+    "main.2ae37fdd.js.map": "/wealthymonkey28/The-little-wizards-quill/static/js/main.2ae37fdd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cba1c587.css",
+    "static/js/main.2ae37fdd.js"
+  ]
+}
