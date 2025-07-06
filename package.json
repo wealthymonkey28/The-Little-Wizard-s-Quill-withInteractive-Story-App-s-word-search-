@@ -1,7 +1,7 @@
 {
-  "name": "magical-story-app",
+  "name": "the-little-wizards-quill",
   "version": "1.0.0",
-  "description": "A magical story generation and exploration app with quiz mode",
+  "description": "A magical story generation and exploration app with quiz mode - perfect for kids learning to read, spell, and explore their imagination!",
   "main": "src/index.js",
   "scripts": {
     "start": "react-scripts start",
@@ -30,5 +30,17 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "keywords": [
+    "react",
+    "story-generator",
+    "educational",
+    "kids",
+    "reading",
+    "quiz",
+    "interactive"
+  ],
+  "author": "wealthymonkey28",
+  "license": "MIT",
+  "homepage": "https://github.com/wealthymonkey28/The-little-wizards-quill"
 }
