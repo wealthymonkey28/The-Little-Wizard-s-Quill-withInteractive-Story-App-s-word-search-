@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.ad70f612.css",
-    "main.js": "/static/js/main.2785000e.js",
-    "index.html": "/index.html",
-    "main.ad70f612.css.map": "/static/css/main.ad70f612.css.map",
-    "main.2785000e.js.map": "/static/js/main.2785000e.js.map"
+    "main.css": "/wealthymonkey28/The-little-wizards-quill/static/css/main.cba1c587.css",
+    "main.js": "/wealthymonkey28/The-little-wizards-quill/static/js/main.2ae37fdd.js",
+    "index.html": "/wealthymonkey28/The-little-wizards-quill/index.html",
+    "main.cba1c587.css.map": "/wealthymonkey28/The-little-wizards-quill/static/css/main.cba1c587.css.map",
+    "main.2ae37fdd.js.map": "/wealthymonkey28/The-little-wizards-quill/static/js/main.2ae37fdd.js.map"
   },
   "entrypoints": [
-    "static/css/main.ad70f612.css",
-    "static/js/main.2785000e.js"
+    "static/css/main.cba1c587.css",
+    "static/js/main.2ae37fdd.js"
   ]
 }

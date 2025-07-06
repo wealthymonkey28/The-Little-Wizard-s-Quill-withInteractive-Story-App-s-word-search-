@@ -120,9 +120,9 @@ const HomeScreen = ({ setCurrentMode }) => {
   return (
     <div className="min-h-screen flex items-center justify-center p-4">
       <div className="max-w-6xl w-full">
-        <div className="text-center mb-12">
-          <h1 className="text-5xl font-bold text-gray-800 mb-4">
-            ✨ Magical Story Adventures ✨
+        <div className="text-center mb-12 animate-fadeIn">
+          <h1 className="text-5xl font-bold text-gray-800 mb-4 magical-title">
+            ✨ The Little Wizard's Quill ✨
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Choose your adventure! Generate stories from chaos, explore magical tales, or test your knowledge with fun quizzes.
@@ -130,11 +130,12 @@ const HomeScreen = ({ setCurrentMode }) => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {modes.map((mode) => (
+          {modes.map((mode, index) => (
             <div
               key={mode.id}
               onClick={() => setCurrentMode(mode.id)}
-              className={`cursor-pointer transform hover:scale-105 transition-all duration-300 rounded-xl p-8 bg-gradient-to-br ${mode.gradient} text-white shadow-lg hover:shadow-xl`}
+              className={`cursor-pointer transform hover-scale transition-all duration-300 rounded-xl p-8 bg-gradient-to-br ${mode.gradient} text-white shadow-magical hover-glow animate-fadeIn`}
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="text-center mb-6">
                 {mode.icon}
@@ -152,7 +153,7 @@ const HomeScreen = ({ setCurrentMode }) => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 animate-fadeIn" style={{ animationDelay: '0.6s' }}>
           <p className="text-gray-600 text-lg">
             Perfect for kids learning to read, spell, and explore their imagination! 🌟
           </p>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Wand2, Loader2 } from 'lucide-react';
+import { Wand2, Loader2, Sparkles, Book, ArrowRight } from 'lucide-react';
 
 const LittleWizardQuill = ({ onStoryGenerated }) => {
   const [userInput, setUserInput] = useState('');
@@ -13,197 +13,227 @@ const LittleWizardQuill = ({ onStoryGenerated }) => {
       generator: (input) => ({
         content: `In the mystical land of ${input.charAt(0).toUpperCase() + input.slice(1)}, there lived a curious creature named Whiskers. Every morning, Whiskers would venture into the enchanted forest, searching for the legendary Crystal of Understanding.
 
-One day, while following a trail of shimmering letters that spelled "${input}", Whiskers discovered a hidden grove where words grew on trees like fruit. The ancient Tree of Stories whispered, "Those who can find meaning in chaos possess the greatest magic of all."
+One day, while following a trail of shimmering letters that spelled "${input}", Whiskers discovered a hidden grove where words grew on trees like fruit. The magical tree in the center bore golden apples, each containing a different word.
 
-Whiskers learned that even the most random combinations of letters held secret messages from the universe, waiting to be discovered by those brave enough to look beyond the surface.`,
-        targetWords: ['mystical', 'creature', 'whiskers', 'enchanted', 'forest', 'legendary', 'crystal', 'understanding', 'shimmering', 'letters', 'discovered', 'hidden', 'grove', 'ancient', 'stories', 'meaning', 'chaos', 'magic', 'random', 'messages', 'universe', 'surface']
+"Welcome, young seeker," said the wise old tree. "I am the Tree of Knowledge, and these word-fruits hold the power to create amazing stories. But first, you must prove your understanding."
+
+Whiskers carefully picked an apple labeled "ADVENTURE" and immediately felt a surge of excitement. The grove began to glow, and suddenly Whiskers could see all the hidden words floating around: "brave", "journey", "magical", "friendship", and "wonder".
+
+From that day forward, Whiskers became the greatest storyteller in all of ${input.charAt(0).toUpperCase() + input.slice(1)}, using the magical words to inspire young readers everywhere. And whenever someone types "${input}" on their magical keyboard, they too can access this wonderful power of storytelling.
+
+The End... or is it just the Beginning? ✨`,
+        title: `The Adventures of Whiskers in ${input.charAt(0).toUpperCase() + input.slice(1)}`,
+        targetWords: ['adventure', 'brave', 'journey', 'magical', 'friendship', 'wonder', 'mystical', 'curious', 'enchanted', 'legendary']
       })
     },
     {
-      pattern: /\d/,
+      pattern: /\d+/,
       generator: (input) => ({
-        content: `Captain Nova's spaceship received a mysterious transmission: "${input}". The ship's AI couldn't decode it, but Nova knew better—sometimes the most important messages come disguised as random noise.
+        content: `Once upon a time, in a kingdom where numbers held magical powers, there lived ${input} friendly dragons. These weren't scary dragons - oh no! - they were the Mathematical Dragons of Mount Calculation.
 
-As Nova input the sequence into the ancient Galactic Archive, something extraordinary happened. The letters and numbers rearranged themselves, revealing coordinates to a lost planet where creativity itself was born.
+Each dragon had a special gift. The first dragon could count to ${input}, the second could add numbers faster than lightning, and the third could solve puzzles that made even the wisest mathematicians scratch their heads.
 
-The journey to this world would be perilous, but Nova understood that within every seemingly meaningless string of characters lay the seeds of infinite possibility, waiting for the right explorer to unlock their secrets.`,
-        targetWords: ['captain', 'spaceship', 'mysterious', 'transmission', 'decode', 'important', 'messages', 'disguised', 'random', 'noise', 'sequence', 'ancient', 'galactic', 'archive', 'extraordinary', 'letters', 'numbers', 'coordinates', 'planet', 'creativity', 'journey', 'perilous', 'meaningless', 'characters', 'infinite', 'possibility', 'explorer', 'secrets']
+One bright morning, the dragons discovered that ${input} magical scrolls had appeared in their cave. Each scroll contained a riddle about words and numbers. "We must solve these riddles," declared the eldest dragon, "for they will teach young adventurers the power of both numbers and letters!"
+
+The dragons worked together, using their counting skills and word magic. They learned that ${input} is not just a number - it represents quantity, possibility, and the foundation of all mathematical adventures.
+
+When they finished solving all ${input} riddles, the scrolls transformed into a beautiful library where numbers and words danced together in perfect harmony. From that day on, anyone who visited could learn the amazing connection between mathematics and storytelling.
+
+And so, the number ${input} became known throughout the land as the Number of Wonder! 🔢✨`,
+        title: `The ${input} Mathematical Dragons`,
+        targetWords: ['mathematical', 'dragons', 'calculation', 'riddles', 'quantity', 'harmony', 'foundation', 'lightning', 'possibility', 'connection']
       })
     },
     {
       pattern: /.*/,
       generator: (input) => ({
-        content: `In Professor Luna's Laboratory of Lost Languages, the string "${input}" appeared on her quantum typewriter—a device that translated thoughts from parallel dimensions.
+        content: `Deep in the Whispering Woods, there existed a magical phenomenon known as the "Echo of Creativity." Whenever someone typed the mysterious combination "${input}" into the ancient Keyboard of Stories, something wonderful would happen.
 
-As Luna studied the mysterious characters, she realized they weren't random at all. They were a greeting from a civilization that communicated entirely through what others might consider gibberish. Each letter combination was a window into their world of pure imagination.
+Professor Scribble, a wise old owl who wore tiny spectacles, had been studying this phenomenon for many years. "Fascinating!" he would hoot. "It seems that any sequence of characters, no matter how random, can spark the most incredible adventures!"
 
-With trembling hands, Luna typed back her own string of "nonsense," beginning the first conversation between worlds that spoke the language of creative chaos. Sometimes, she thought, the most profound communication happens when we abandon the need to make conventional sense.`,
-        targetWords: ['professor', 'laboratory', 'languages', 'quantum', 'typewriter', 'device', 'translated', 'thoughts', 'parallel', 'dimensions', 'mysterious', 'characters', 'random', 'greeting', 'civilization', 'communicated', 'gibberish', 'combination', 'window', 'imagination', 'trembling', 'nonsense', 'conversation', 'worlds', 'language', 'creative', 'chaos', 'profound', 'communication', 'conventional']
+One day, a young explorer typed "${input}" and immediately, the forest began to shimmer. Trees started growing books instead of leaves, flowers bloomed into colorful letters, and the brook began babbling actual words instead of just babbling!
+
+"You see," explained Professor Scribble, adjusting his spectacles, "creativity doesn't come from perfect words or complete sentences. It comes from curiosity, imagination, and the willingness to explore the unknown."
+
+The young explorer learned that day that "${input}" wasn't just random typing - it was the beginning of infinite possibilities. Every character was a seed, every letter a potential adventure, and every story a bridge between imagination and reality.
+
+From that moment on, the Whispering Woods echoed with the laughter and wonder of countless young storytellers, all discovering that magic can be found in the most unexpected places - even in "${input}"!
+
+Remember: Every great story starts with a single word, letter, or even a curious combination like "${input}". What story will you create next? 🌟`,
+        title: `The Mystery of "${input}"`,
+        targetWords: ['creativity', 'phenomenon', 'mysterious', 'fascinating', 'explorer', 'shimmer', 'curiosity', 'imagination', 'possibilities', 'unexpected']
       })
     }
   ];
 
-  const generateStory = (input) => {
-    // Find the best matching template
-    const template = storyTemplates.find(t => t.pattern.test(input)) || storyTemplates[storyTemplates.length - 1];
-    return template.generator(input);
-  };
-
-  const simulateAPICall = (input) => {
-    return new Promise((resolve) => {
-      // Simulate API delay
-      setTimeout(() => {
-        const story = generateStory(input);
-        resolve(story);
-      }, 1500 + Math.random() * 1000); // 1.5-2.5 seconds
-    });
-  };
-
-  const handleGenerate = async () => {
-    if (!userInput.trim()) {
-      alert('Please enter some text first! 🤔');
-      return;
-    }
+  const generateStory = () => {
+    if (!userInput.trim()) return;
 
     setIsLoading(true);
-    setGeneratedStory(null);
-
-    try {
-      const result = await simulateAPICall(userInput);
+    
+    // Simulate AI generation delay
+    setTimeout(() => {
+      // Find the appropriate template
+      const template = storyTemplates.find(t => t.pattern.test(userInput)) || storyTemplates[2];
+      const story = template.generator(userInput);
       
-      // Create a story object for the interactive app
-      const storyForExplorer = {
-        title: `Story from "${userInput}"`,
-        content: result.content,
-        targetWords: result.targetWords
-      };
-      
-      setGeneratedStory(result);
-      
-      // Add to generated stories for use in other modes
-      if (onStoryGenerated) {
-        onStoryGenerated(storyForExplorer);
-      }
-      
-    } catch (error) {
-      console.error('Error generating story:', error);
-      setGeneratedStory({
-        content: 'Oops! The quill is out of ink. Please try again in a moment! 🪶',
-        targetWords: []
-      });
-    } finally {
+      setGeneratedStory(story);
       setIsLoading(false);
-    }
-  };
-
-  const handleExampleClick = (example) => {
-    setUserInput(example);
+      
+      // Notify parent component
+      if (onStoryGenerated) {
+        onStoryGenerated(story);
+      }
+    }, 2000);
   };
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter') {
-      handleGenerate();
+      generateStory();
     }
   };
 
-  const examples = ['kjhgfdsa', 'Hdfclife', 'qqwweerr', 'zxcvbnm', '123abc', 'mmmkkk'];
+  const resetGenerator = () => {
+    setUserInput('');
+    setGeneratedStory(null);
+  };
 
   return (
     <div className="min-h-screen p-4">
       <div className="max-w-4xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-8 animate-fadeIn">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-3">
-            <Wand2 className="text-purple-600" />
-            🪶 The Little Wizard's Quill ✨
-          </h1>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Transform random keystrokes into magical stories! Type anything—gibberish, random characters, 
-            or what your little one typed—and watch AI find hidden meaning and create enchanting tales.
-          </p>
-        </div>
+        <div className="card-magical animate-fadeIn">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <h1 className="text-4xl font-bold text-gray-800 mb-4 magical-title flex items-center justify-center gap-3">
+              <Wand2 className="text-purple-600" />
+              🪶 The Little Wizard's Quill ✨
+            </h1>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Type anything - random letters, numbers, or even gibberish - and watch the magic happen! 
+              Our enchanted quill will transform your keystrokes into wonderful stories.
+            </p>
+          </div>
 
-        {/* Input Section */}
-        <div className="bg-white rounded-xl shadow-lg p-8 mb-6 animate-fadeIn">
-          <div className="space-y-6">
-            <div>
-              <input 
-                type="text" 
+          {/* Input Section */}
+          <div className="mb-8">
+            <div className="mb-4">
+              <label htmlFor="story-input" className="block text-sm font-medium text-gray-700 mb-2">
+                ✨ Cast Your Spell (Type Anything!)
+              </label>
+              <input
+                id="story-input"
+                type="text"
                 value={userInput}
                 onChange={(e) => setUserInput(e.target.value)}
                 onKeyPress={handleKeyPress}
-                placeholder="Type random characters... e.g., kjhgfd, asdfgh, or Hdfclife"
-                maxLength="200"
-                className="w-full px-6 py-4 text-lg border-3 border-gray-300 rounded-xl bg-white transition-all duration-300 outline-none focus:border-purple-500 focus:shadow-lg focus:transform focus:scale-[1.02]"
+                placeholder="Type anything... 'asdf', '123', 'purple monkey' - anything works!"
+                className="input-magical"
+                disabled={isLoading}
               />
             </div>
             
-            <button 
-              onClick={handleGenerate}
-              disabled={isLoading}
-              className="w-full py-4 text-xl font-semibold text-white bg-gradient-to-r from-purple-600 to-pink-600 border-none rounded-xl cursor-pointer transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none"
-            >
-              {isLoading ? (
-                <span className="flex items-center justify-center gap-2">
-                  <Loader2 className="animate-spin" size={20} />
-                  Consulting the quill...
-                </span>
-              ) : (
-                '✨ Reveal the Hidden Story ✨'
-              )}
-            </button>
-          </div>
-        </div>
-
-        {/* Examples */}
-        <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4">Try these examples:</h3>
-          <div className="flex flex-wrap gap-3">
-            {examples.map((example, index) => (
+            <div className="flex gap-4">
               <button
-                key={index}
-                onClick={() => handleExampleClick(example)}
-                className="px-4 py-2 bg-white border-2 border-purple-400 text-purple-600 rounded-full cursor-pointer transition-all duration-300 hover:bg-purple-600 hover:text-white hover:transform hover:scale-105 text-sm font-medium"
+                onClick={generateStory}
+                disabled={!userInput.trim() || isLoading}
+                className="btn-magical flex-1"
               >
-                {example}
+                {isLoading ? (
+                  <>
+                    <Loader2 className="animate-spin" size={20} />
+                    Weaving Magic...
+                  </>
+                ) : (
+                  <>
+                    <Sparkles size={20} />
+                    Generate Story
+                  </>
+                )}
               </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Loading State */}
-        {isLoading && (
-          <div className="bg-white rounded-xl shadow-lg p-6 text-center animate-fadeIn">
-            <div className="flex items-center justify-center gap-3 text-purple-600">
-              <Loader2 className="animate-spin" size={24} />
-              <span className="text-lg font-medium">Consulting the quill... ✨</span>
+              
+              {generatedStory && (
+                <button
+                  onClick={resetGenerator}
+                  className="px-6 py-3 border-2 border-purple-600 text-purple-600 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
+                >
+                  New Story
+                </button>
+              )}
             </div>
           </div>
-        )}
 
-        {/* Story Output */}
-        {generatedStory && !isLoading && (
-          <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-8 border-l-4 border-purple-500 shadow-lg animate-slideIn">
-            <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-3">
-              <span>🪶</span>
-              <span>Your Mystical Story</span>
-            </h2>
-            <div className="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
-              {generatedStory.content}
-            </div>
-            
-            {generatedStory.targetWords && generatedStory.targetWords.length > 0 && (
-              <div className="mt-6 p-4 bg-white rounded-lg border border-purple-200">
-                <p className="text-sm text-purple-600 font-medium mb-2">
-                  🎯 This story has been added to your collection! You can now explore it in Word Search or Quiz mode.
-                </p>
-                <p className="text-xs text-gray-500">
-                  Contains {generatedStory.targetWords.length} hidden words to discover.
-                </p>
+          {/* Generated Story */}
+          {generatedStory && (
+            <div className="animate-fadeIn">
+              <div className="bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl p-6 mb-6">
+                <h2 className="text-2xl font-bold text-gray-800 mb-4 flex items-center gap-2">
+                  <Book className="text-purple-600" />
+                  {generatedStory.title}
+                </h2>
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-gray-700 leading-relaxed whitespace-pre-line">
+                    {generatedStory.content}
+                  </p>
+                </div>
               </div>
-            )}
-          </div>
-        )}
+
+              {/* Target Words for Exploration */}
+              {generatedStory.targetWords && generatedStory.targetWords.length > 0 && (
+                <div className="bg-blue-50 rounded-xl p-6 mb-6">
+                  <h3 className="text-lg font-bold text-blue-800 mb-3 flex items-center gap-2">
+                    <Sparkles className="text-blue-600" />
+                    Words to Explore in Your Story
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {generatedStory.targetWords.map((word, index) => (
+                      <span
+                        key={index}
+                        className="bg-blue-200 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
+                      >
+                        {word}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-blue-700 text-sm mt-3">
+                    💡 Tip: Try the Word Search mode to find these words in your story!
+                  </p>
+                </div>
+              )}
+
+              {/* Success Message */}
+              <div className="bg-green-50 rounded-xl p-6 text-center">
+                <h3 className="text-lg font-bold text-green-800 mb-2">
+                  � Your Story Has Been Created!
+                </h3>
+                <p className="text-green-700 mb-4">
+                  Amazing! You've just transformed "{userInput}" into a magical story. 
+                  Your story has been saved and you can now explore it in Word Search mode or test your comprehension in Quiz mode!
+                </p>
+                <div className="flex justify-center">
+                  <span className="inline-flex items-center gap-2 text-green-600 font-medium">
+                    <ArrowRight size={16} />
+                    Check the navigation above to explore your story further!
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* How It Works */}
+          {!generatedStory && (
+            <div className="bg-yellow-50 rounded-xl p-6 mt-8">
+              <h3 className="text-lg font-bold text-yellow-800 mb-3">
+                🪄 How The Magic Works
+              </h3>
+              <div className="space-y-2 text-yellow-700">
+                <p>• <strong>Type anything:</strong> Random letters, numbers, words, or symbols</p>
+                <p>• <strong>Watch the magic:</strong> Our AI transforms your input into a complete story</p>
+                <p>• <strong>Explore & learn:</strong> Use Word Search and Quiz modes with your generated story</p>
+                <p>• <strong>Have fun:</strong> There are no wrong answers - every input creates a unique adventure!</p>
+              </div>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

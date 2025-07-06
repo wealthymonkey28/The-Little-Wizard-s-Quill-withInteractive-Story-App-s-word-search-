@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { Book, Search, RotateCcw, Lightbulb, Star, Heart, Wand2, Brain } from 'lucide-react';
+import { Book, Search, RotateCcw, Lightbulb, Star, Heart, Wand2, Brain, CheckCircle, XCircle, Award } from 'lucide-react';
 
 // Spelling correction dictionary
 const spellingCorrections = {
@@ -17,7 +17,7 @@ const predefinedStories = [
     difficulty: "Easy",
     content: `Once upon a time, in a beautiful magic forest, there lived a little rabbit named Luna. The forest was full of wonderful animals and colorful flowers. One sunny morning, Luna decided to go on an adventure to find the secret rainbow treasure hidden deep in the forest.
 
-She met a wise old owl who told her, “Follow the path of golden leaves, and you will find what you seek.” Luna hopped along the path, making friends with a friendly squirrel and a singing bird. Together, they discovered a magical clearing where the rainbow treasure sparkled in the sunlight.
+She met a wise old owl who told her, "Follow the path of golden leaves, and you will find what you seek." Luna hopped along the path, making friends with a friendly squirrel and a singing bird. Together, they discovered a magical clearing where the rainbow treasure sparkled in the sunlight.
 
 The treasure was not gold or jewels, but a beautiful garden where all the forest animals could play together happily forever.`, 
     targetWords: ['beautiful', 'magic', 'forest', 'little', 'rabbit', 'animals', 'flowers', 'adventure', 'secret', 'rainbow', 'treasure', 'golden', 'friends', 'magical', 'garden', 'happy'], 
@@ -32,7 +32,7 @@ The treasure was not gold or jewels, but a beautiful garden where all the forest
 
 She decided to solve this mystery herself. With the help of her loyal friend, a clever wizard named Merlin, they searched every room in the castle. They found strange clues: golden footprints, mysterious notes, and magical sparkles in the air.
 
-After a long journey through the castle’s secret passages, they discovered that a playful dragon had borrowed the crown to decorate his cave for a surprise party. The dragon wanted to celebrate the princess’s birthday! Princess Aria was so happy that she invited the dragon to live in the castle and become the royal party planner.`, 
+After a long journey through the castle's secret passages, they discovered that a playful dragon had borrowed the crown to decorate his cave for a surprise party. The dragon wanted to celebrate the princess's birthday! Princess Aria was so happy that she invited the dragon to live in the castle and become the royal party planner.`, 
     targetWords: ['kingdom', 'princess', 'castle', 'mountain', 'secret', 'magical', 'crown', 'treasure', 'mystery', 'wizard', 'clues', 'golden', 'journey', 'dragon', 'surprise', 'birthday', 'party'], 
     color: "from-purple-400 to-pink-500" 
   },
